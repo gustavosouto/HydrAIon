@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydrAIon - Dashboard de Monitoramento da Qualidade da Água</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>🌊 HydrAIon</h1>
+            <p>Sistema IoT com IA para Monitoramento Inteligente da Qualidade da Água</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="dashboard-container">
+            <!-- Painel de informações -->
+            <div class="info-panel">
+                <h2>Status do Sistema</h2>
+                <div class="status-cards">
+                    <div class="status-card">
+                        <h3>Sensores Ativos</h3>
+                        <span id="active-sensors" class="status-value">-</span>
+                    </div>
+                    <div class="status-card">
+                        <h3>Última Atualização</h3>
+                        <span id="last-update" class="status-value">-</span>
+                    </div>
+                    <div class="status-card">
+                        <h3>Qualidade Geral</h3>
+                        <span id="overall-quality" class="status-value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="map-container">
+                <h2>Localização dos Sensores</h2>
+                <div id="map"></div>
+            </div>
+
+            <!-- Dados dos sensores -->
+            <div class="sensor-data">
+                <h2>Dados dos Sensores</h2>
+                <div id="sensor-list">
+                    <!-- Os dados dos sensores serão inseridos aqui dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Projeto HydrAIon - Faculdade Nova Roma (FNR)</p>
+    </footer>
+
+    <!-- JavaScript customizado -->
+    <script src="app.js"></script>
+</body>
+</html>
+

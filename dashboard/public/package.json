@@ -1,0 +1,30 @@
+{
+  "name": "hydraion-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard web para o sistema HydrAIon de monitoramento da qualidade da água",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory public",
+    "serve": "python3 -m http.server 8000 --directory public"
+  },
+  "keywords": [
+    "hydraion",
+    "water-quality",
+    "iot",
+    "dashboard",
+    "leaflet",
+    "firebase"
+  ],
+  "author": "Gustavo Souto Silva de Barros Santos",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "firebase": "^9.23.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/hydraion.git"
+  }
+}
+
